@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="hoja-estilo.css" />
+  </head>
+  <body>
+    <form action="localhost" method="get">
+      <div class="numero">
+        <input type="text" maxlength="10" id="display" />
+      </div>
+      <div class="calculadora">
+        <table>
+          <tr>
+            <td onclick=" MathOperation('%')" class="gris">
+              <a id="porcentaje" name="porcentaje">%</a>
+            </td>
+            <td class="gris"><a id="CE" name="CE"> CE </a></td>
+            <td onclick="deleteAllDisplay('delete')" class="gris">
+              <a id="C" name="C">C</a>
+            </td>
+            <td onclick="deleteLatEntry('back')" class="gris">
+              <a id="back" name="back">back </a>
+            </td>
+          </tr>
+          <tr>
+            <td onclick=" MathOperation('frac')" class="gris">
+              <a id="frac" name="frac">1/x </a>
+            </td>
+            <td onclick=" MathOperation('pow')" class="gris">
+              <a id="exp" name="exp">X^2 </a>
+            </td>
+            <td onclick=" MathOperation('sqrt')" class="gris">
+              <a id="sqrt" name="sqrt">sqrt</a>
+            </td>
+            <td class="gris" onclick=" MathOperation('division')">
+              <a id="division" name="division">/</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td onclick="addKeyDisplay('7')"><a id="7" name="7">7</a></td>
+            <td onclick="addKeyDisplay('8')"><a id="8" name="8">8</a></td>
+            <td onclick="addKeyDisplay('9')"><a id="9" name="9">9</a></td>
+            <td class="gris" onclick=" MathOperation('multiplicacion')">
+              <a id="x" name="x">x</a>
+            </td>
+          </tr>
+          <tr>
+            <td onclick="addKeyDisplay('4')"><a id="4" name="4">4</a></td>
+            <td onclick="addKeyDisplay('5')"><a id="5" name="5">5</a></td>
+            <td onclick="addKeyDisplay('6')"><a id="6" name="6">6</a></td>
+            <td class="gris" onclick=" MathOperation('resta')">
+              <a id="-" name="-">-</a>
+            </td>
+          </tr>
+          <tr>
+            <td onclick="addKeyDisplay('1')"><a id="1" name="1">1</a></td>
+            <td onclick="addKeyDisplay('2')"><a id="2" name="2">2</a></td>
+            <td onclick="addKeyDisplay('3')"><a id="3" name="3">3</a></td>
+            <td onclick=" MathOperation('suma')" class="gris">
+              <a id="+" name="+">+</a>
+            </td>
+          </tr>
+          <tr>
+            <td onclick="addKeyDisplay('sign')">
+              <a id="masmenos" name="masmenos">+/-</a>
+            </td>
+            <td onclick="addKeyDisplay('0')"><a id="0" name="0">0</a></td>
+            <td onclick="addKeyDisplay('.')"><a id="coma" name="coma">,</a></td>
+            <td class="gris" onclick="MathOperation('equals')">
+              <a id="igual" name="igual">=</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </form>
+    <script src="calculadora.js"></script>
+  </body>
+</html>
